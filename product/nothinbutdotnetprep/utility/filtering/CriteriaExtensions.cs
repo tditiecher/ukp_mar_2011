@@ -28,7 +28,7 @@ namespace nothinbutdotnetprep.utility.filtering
         public static Criteria<ItemToMatch> xor<ItemToMatch>(this Criteria<ItemToMatch> left,
                                                     Criteria<ItemToMatch> right)
         {
-            return new OrCriteria<ItemToMatch>(left, right).and(new AndCriteria<ItemToMatch>(left, right).not());
+            return left.or(right).and(left.and(right).not());
         }
     }
 }

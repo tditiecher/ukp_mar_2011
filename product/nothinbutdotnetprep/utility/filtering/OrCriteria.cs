@@ -18,4 +18,5 @@ namespace nothinbutdotnetprep.utility.filtering
             return left_side.matches(item) || right_side.matches(item);
         }
     }
+
 }
